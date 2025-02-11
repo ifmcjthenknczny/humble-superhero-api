@@ -7,12 +7,13 @@
     "scripts": {
         "build": "tsc -p tsconfig.json",
         "start": "node --loader ts-node/esm index.ts",
-        "dev": "nodemon --watch src --ext ts --exec \"node --loader ts-node/esm index.ts\"",
+        "dev": "nodemon --watch . --ext ts --exec \"node --loader ts-node/esm index.ts\"",
         "format": "prettier --write \"**/*.{ts,tsx,json,css,md}\"",
         "lint": "eslint . --fix"
     },
     "dependencies": {
-        "fastify": "^5.2.1"
+        "fastify": "^5.2.1",
+        "zod": "^3.24.1"
     },
     "devDependencies": {
         "@eslint/js": "^9.20.0",
