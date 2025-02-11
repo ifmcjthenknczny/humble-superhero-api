@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from 'fastify'
-import { ValidationError } from '../helpers/validate.js'
+import { ValidationError } from '../helpers/validate'
 
 export const apiWrapper = (
     fn: (request: FastifyRequest, response: FastifyReply) => Promise<void>,

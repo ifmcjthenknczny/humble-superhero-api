@@ -1,6 +1,6 @@
 import fastify from 'fastify'
-import { pingRoutes } from './routes/ping.js'
-import { superheroesRoutes } from './routes/superheroes.js'
+import { pingRoutes } from './routes/ping'
+import { superheroesRoutes } from './routes/superheroes'
 
 const server = fastify()
 

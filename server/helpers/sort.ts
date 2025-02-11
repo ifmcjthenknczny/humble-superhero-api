@@ -1,4 +1,4 @@
-import { Superhero } from '../types.js'
+import { Superhero } from '../types'
 
 export const sortSuperheroes = (superheroes: Superhero[]): Superhero[] => {
     return superheroes.toSorted((a, b) =>

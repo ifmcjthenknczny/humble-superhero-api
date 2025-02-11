@@ -1,4 +1,4 @@
-import { Superhero } from '../types.js'
+import { Superhero } from '../types'
 
 export const DEFAULT_SUPERHEROES: Superhero[] = [
     {

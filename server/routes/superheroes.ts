@@ -1,11 +1,11 @@
-import { findNextId } from './../helpers/db.js'
+import { findNextId } from './../helpers/db'
 import { FastifyInstance } from 'fastify'
-import { sortSuperheroes } from '../helpers/sort.js'
-import { superheroes } from '../database/database.js'
-import { validate } from '../helpers/validate.js'
-import { addSuperheroSchema } from '../schema/schema.js'
-import { Superhero } from '../types.js'
-import { apiWrapper } from '../helpers/request.js'
+import { sortSuperheroes } from '../helpers/sort'
+import { superheroes } from '../database/database'
+import { validate } from '../helpers/validate'
+import { addSuperheroSchema } from '../schema/schema'
+import { Superhero } from '../types'
+import { apiWrapper } from '../helpers/request'
 
 export async function superheroesRoutes(fastify: FastifyInstance) {
     fastify.get(

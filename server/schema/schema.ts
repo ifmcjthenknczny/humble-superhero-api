@@ -1,5 +1,5 @@
 import { z, ZodSchema } from 'zod'
-import { Superhero } from '../types.js'
+import { Superhero } from '../types'
 
 export const addSuperheroSchema: ZodSchema<Omit<Superhero, 'id'>> = z.object({
     name: z

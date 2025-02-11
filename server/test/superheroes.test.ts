@@ -1,7 +1,7 @@
 import fastify from 'fastify'
-import { superheroesRoutes } from '../routes/superheroes.js'
-import { DEFAULT_SUPERHEROES, superheroes } from '../database/database.js'
-import { omit } from '../helpers/object.js'
+import { superheroesRoutes } from '../routes/superheroes'
+import { DEFAULT_SUPERHEROES, superheroes } from '../database/database'
+import { omit } from '../helpers/object'
 
 const newHeroPayload = {
     name: 'Iron Man 2',
@@ -56,7 +56,7 @@ describe('Superheroes API', () => {
         })
 
         expect(response.statusCode).toBe(200)
-        expect(response.json()).toEqual(DEFAULT_SUPERHEROES)
+        expect(response.json()).toEqual(expectedSuperheroes)
     })
 
     test('POST /superheroes should add a new superhero', async () => {
@@ -72,7 +72,7 @@ describe('Superheroes API', () => {
             ...omit(newHeroPayload, ['humilityScore']),
             humilityScore: +newHeroPayload.humilityScore,
         })
-        expect(superheroes).toHaveLength(DEFAULT_SUPERHEROES.length + 1)
+        expect(superheroes).toHaveLength(expectedSuperheroes.length + 1)
 
         const getResponse = await app.inject({
             method: 'GET',
