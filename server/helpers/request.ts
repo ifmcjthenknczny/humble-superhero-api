@@ -13,7 +13,9 @@ export const apiWrapper = (
                 response.status(400).send({ error: error.message })
                 return
             }
-            response.status(500).send({ error: 'Unknown error' })
+            response
+                .status(500)
+                .send({ error: error.message ?? 'Unknown error' })
         }
     }
 }

@@ -1,7 +1,6 @@
-import { Superhero } from './types.js'
+import { Superhero } from '../types.js'
 
-// A variable that acts as a database as long the server is running
-export const superheroes: Superhero[] = [
+export const DEFAULT_SUPERHEROES: Superhero[] = [
     {
         id: 1,
         name: 'Superman',
@@ -22,3 +21,6 @@ export const superheroes: Superhero[] = [
     },
     { id: 4, name: 'Iron Man', superpower: 'Money', humilityScore: 0 },
 ]
+
+// A variable that acts as a database as long the server is running
+export const superheroes: Superhero[] = [...DEFAULT_SUPERHEROES]

@@ -8,7 +8,7 @@ export const addSuperheroSchema: ZodSchema<Omit<Superhero, 'id'>> = z.object({
     superpower: z
         .string()
         .max(256, { message: 'Superpower must be 256 characters or less' }),
-    humilityScore: z
+    humilityScore: z.coerce
         .number()
         .int({ message: 'Humility score must be an integer' })
         .min(0, { message: 'Humility score must be at least 0' })
