@@ -14,7 +14,7 @@
 
 body {
     position: relative;
-    background-image: url('/old-paper.jpg');
+    background-image: url('/old-paper.jpg'); /* https://unsplash.com/photos/a-piece-of-white-paper-with-some-brown-stains-on-it-H-0APTPDM3Q */
     background-size: cover;
     background-position: center;
     background-repeat: repeat;

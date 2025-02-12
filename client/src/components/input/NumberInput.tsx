@@ -20,7 +20,7 @@ function NumberButton({ children, onClick }: ButtonProps) {
         <button
             type="button"
             onClick={onClick}
-            className="border-3 text-2xl rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-red-500 transition-colors hover:bg-[#fec108]"
+            className="border-3 text-2xl rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-superhero-red transition-colors hover:bg-superhero-gold"
         >
             {children}
         </button>

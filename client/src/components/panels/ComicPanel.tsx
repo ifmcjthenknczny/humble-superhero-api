@@ -33,7 +33,7 @@ export default function ComicPanel({
     return (
         <div
             className={classnames(
-                'w-full border-9 rounded-3xl p-6 bg-[#f8f5ef]',
+                'w-full border-9 rounded-3xl p-6 bg-comic-book',
                 centered && 'flex flex-col justify-center items-center',
                 className,
             )}

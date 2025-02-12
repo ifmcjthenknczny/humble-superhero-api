@@ -9,7 +9,7 @@
     "lint": "eslint . --fix",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,css,md}\"",
-    "checkAll": "yarn format && yarn lint"
+    "checkAll": "yarn format && yarn lint && yarn build"
   },
   "dependencies": {
     "axios": "^1.7.9",

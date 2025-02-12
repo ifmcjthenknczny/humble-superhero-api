@@ -1,15 +1,25 @@
-export default {
+const config = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
     theme: {
       extend: {
-        colors: {
-          'old-paper': {
-            DEFAULT: '#eee7d7'
-          },
+      colors: {
+        'comic-book': {
+          DEFAULT: '#eee7d7'
         },
-        fontFamily: {
-          'sans': ['Bangers', 'serif'],
-        },
+        'superhero': {
+          'gold': '#fec108',
+          'red': '#ef4444'
+        }
       },
+      fontFamily: {
+        'sans': ['Bangers', 'serif'],
+      },
+    }
     },
-    purge: ['./src/**/*.{js,ts,jsx,tsx}'],
+    plugins: []
 }
+
+export default config

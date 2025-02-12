@@ -10,7 +10,7 @@ export default function ErrorMessage({ className, message }: Props) {
                 className,
             )}
         >
-            <p className="text-red-500">{message}</p>
+            <p className="text-superhero-red">{message}</p>
         </div>
     )
 }

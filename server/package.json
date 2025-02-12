@@ -12,7 +12,7 @@
         "lint": "npx eslint . --fix",
         "test": "jest test",
         "format": "prettier --write .",
-        "checkAll": "yarn format && yarn lint && yarn test"
+        "checkAll": "yarn format && yarn lint && yarn test && yarn build"
     },
     "dependencies": {
         "@fastify/cors": "^10.0.2",
