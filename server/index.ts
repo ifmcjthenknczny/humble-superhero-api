@@ -1,11 +1,18 @@
 import fastify from 'fastify'
 import { pingRoutes } from './routes/ping'
 import { superheroesRoutes } from './routes/superheroes'
+import cors from '@fastify/cors'
 
 const server = fastify()
 
 server.register(pingRoutes)
 server.register(superheroesRoutes)
+
+server.register(cors, {
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+})
 
 server.listen({ port: 8080 }, (err, address) => {
     if (err) {
