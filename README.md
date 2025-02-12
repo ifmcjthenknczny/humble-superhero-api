@@ -115,10 +115,11 @@ If I were collaborating with a teammate on this project I would:
 - Focus on improving data persistence by exploring the integration of a proper database (such as PostgreSQL or MongoDB) instead of using an in-memory array. This would make the API more robust and scalable.
 - Assess the need for authentication and authorization to secure the API.
 - Discuss deployment strategies, necessary server and client configuration changes, and improvements in CI/CD pipelines.
+- Develop and maintain Swagger documentation for clarity.
 
 ## If I had more time
 ### Frontend enhancements
-- Write unit and integration tests.
+- Write unit, integration and e2e tests.
 - Refactor component code and improve variable/function names (especially those in `input` directory).
 - Explore a global state solution for `refreshCount`, which may be necessary in the future.
 - Improve responsiveness for certain screen widths.
@@ -137,6 +138,7 @@ If I were collaborating with a teammate on this project I would:
 
 ### General improvements
 - Convert the project to a monorepo and add Husky hooks.
+- Develop Swagger API documentation.
 
 ## License
 This work is licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
