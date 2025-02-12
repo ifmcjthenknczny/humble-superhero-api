@@ -98,6 +98,8 @@ curl -X POST -H "Content-Type: application/json" -d '{
 }' http://localhost:8080/superheroes
 ```
 
+`humilityScore` is coerced automatically to number. It must be a number between 0 and 10. `name` and `superpower` both must be strings with character limit of 256.
+
 * **Fetching Superheroes `(GET /superheroes)`:**
 ```bash
 curl http://localhost:8080/superheroes
