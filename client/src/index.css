@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import 'tailwindcss';
 
+@theme {
+    --color-comic-book: #f8f5ef;
+    --color-superhero-gold: #fec108;
+    --color-superhero-red: #ef4444;
+}
+
 :root {
     font-family: 'Bangers', serif;
     font-weight: 400;
