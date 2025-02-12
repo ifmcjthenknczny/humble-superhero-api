@@ -12,9 +12,15 @@ type FormData = {
     humilityScore: number
 }
 
+export type Props = {
+    onSubmit: () => void
+}
+
 const CLEAR_ERRORS_MS = 2_500
 
-export default function SuperheroForm() {
+export default function SuperheroForm({
+    onSubmit: incrementRefreshCount,
+}: Props) {
     const {
         register,
         handleSubmit,
@@ -40,6 +46,7 @@ export default function SuperheroForm() {
         try {
             await axios.post('http://localhost:8080/superheroes', data)
             reset()
+            incrementRefreshCount()
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             console.error('Error creating superhero:', error)
@@ -96,7 +103,7 @@ export default function SuperheroForm() {
 
                 <SubmitButton
                     errorMessage={submissionError}
-                    isLoading={isSubmitting}
+                    isSubmitting={isSubmitting}
                 />
             </form>
             {isSubmitting && <Loader />}

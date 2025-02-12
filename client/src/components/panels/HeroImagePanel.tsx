@@ -3,7 +3,7 @@ import ComicPanel from './ComicPanel'
 
 export default function HeroImagePanel() {
     return (
-        <ComicPanel centered>
+        <ComicPanel centered className="hidden md:flex">
             <img
                 className="w-1/2"
                 src="/superhero.png"
