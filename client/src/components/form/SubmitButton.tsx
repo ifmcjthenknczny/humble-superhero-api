@@ -18,7 +18,7 @@ export default function SubmitButton({ errorMessage }: Props) {
     return (
         <button
             type="submit"
-            className="text-2xl mt-6 border-3 w-fit py-0.5 px-4 bg-[#fec108] rounded-lg cursor-pointer hover:text-red-500 transition-colors self-center"
+            className="text-2xl mt-6 border-3 w-fit py-0.5 px-4 bg-[#fec108] rounded-xl cursor-pointer hover:text-red-500 transition-colors self-center"
         >
             Submit!!!
         </button>

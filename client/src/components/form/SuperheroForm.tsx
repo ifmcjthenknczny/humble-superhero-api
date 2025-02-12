@@ -21,6 +21,7 @@ export default function SuperheroForm() {
         formState: { errors },
         reset,
         clearErrors,
+        setValue,
     } = useForm<FormData>()
 
     const [submissionError, setSubmissionError] = useState<string>()
@@ -89,6 +90,7 @@ export default function SuperheroForm() {
                     label="Humility"
                     fieldName="humilityScore"
                     register={register}
+                    onChange={(value) => setValue('humilityScore', value)}
                     errorMessage={errors.humilityScore?.message}
                 />
 

@@ -34,49 +34,16 @@ body::before {
     z-index: -1;
 }
 
-input[type='range']::-webkit-slider-thumb {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    appearance: none;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: gold;
-    cursor: pointer;
-    border: 3px black solid;
+    margin: 0;
 }
 
-input[type='range']::-moz-range-thumb {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: gold;
-    cursor: pointer;
-    border: 3px black solid;
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 
-input[type='range']::-ms-range-thumb {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: gold;
-    cursor: pointer;
-    border: 3px black solid;
-}
-
-input[type='range'] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 32px;
-    background: red;
-    outline: none;
-}
-
-input[type='range']::-webkit-slider-runnable-track {
-    height: 32px;
-    background: red;
-}
-
-input[type='range']::-moz-range-progress {
-    background-color: red;
+input[type='number'] {
+    padding: 0.5rem;
 }
