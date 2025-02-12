@@ -8,6 +8,7 @@ const server = fastify()
 server.register(pingRoutes)
 server.register(superheroesRoutes)
 
+// Expand the origin array when project is deployed
 server.register(cors, {
     origin: 'http://localhost:5173',
     methods: ['GET', 'POST'],
