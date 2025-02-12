@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import FormInput from '../input/FormInput'
+import TextInput from '../input/TextInput'
 import axios from 'axios'
 import SubmitButton from './SubmitButton'
 import Loader from '../shared/Loader'
@@ -81,13 +81,13 @@ export default function AddSuperheroForm({
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-1 w-full md:w-2/3"
             >
-                <FormInput
+                <TextInput
                     errorMessage={errors.name?.message}
                     fieldName="name"
                     label="Superhero name"
                     register={register}
                 />
-                <FormInput
+                <TextInput
                     errorMessage={errors.superpower?.message}
                     fieldName="superpower"
                     label="Superpower"

@@ -1,6 +1,7 @@
 import { useState, ChangeEvent, PropsWithChildren } from 'react'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
 import InputWrapper, { Props as InputWrapperProps } from './InputWrapper'
+import Input from './Input'
 
 type Props<T extends FieldValues> = {
     min: number
@@ -66,24 +67,18 @@ export default function NumberInput<T extends FieldValues>({
         >
             <div className="flex items-center gap-0.5">
                 <NumberButton onClick={handleDecrement}>-</NumberButton>
-                <input
-                    className="border-3 bg-white h-8 p-2 rounded-lg text-sm focus:outline-none w-16 text-center"
-                    id={fieldName.toString()}
-                    {...register(fieldName, {
-                        required: `${label} is required`,
-                        valueAsNumber: true,
-                        min: {
-                            value: min,
-                            message: `${label} must be at least ${min}`,
-                        },
-                        max: {
-                            value: max,
-                            message: `${label} must be at most ${max}`,
-                        },
-                    })}
+                <Input
+                    className="w-16 text-center"
                     type="number"
                     value={value}
                     onChange={handleChange}
+                    register={register}
+                    fieldName={fieldName}
+                    label={label}
+                    min={min}
+                    max={max}
+                    defaultValue={defaultValue}
+                    noWrapper
                 />
                 <NumberButton onClick={handleIncrement}>+</NumberButton>
             </div>
