@@ -3,6 +3,7 @@ import Header from './components/Header'
 import HeroImagePanel from './components/panels/HeroImagePanel'
 import FormPanel from './components/panels/FormPanel'
 import Footer from './components/Footer'
+import ListPanel from './components/panels/ListPanel'
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <FormPanel />
                     <HeroImagePanel />
                 </div>
+                <ListPanel />
             </main>
             <Footer />
         </>
