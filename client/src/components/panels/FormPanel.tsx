@@ -1,13 +1,12 @@
-import React from 'react'
 import ComicPanel from './ComicPanel'
-import SuperheroForm, {
+import AddSuperheroForm, {
     Props as SuperheroFormProps,
-} from '../form/SuperheroForm'
+} from '../form/AddSuperheroForm'
 
 export default function FormPanel(props: SuperheroFormProps) {
     return (
         <ComicPanel centered>
-            <SuperheroForm {...props} />
+            <AddSuperheroForm {...props} />
         </ComicPanel>
     )
 }

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const GITHUB_URL = 'https://github.com/ifmcjthenknczny/humble-superhero-api'
 const CREATOR = 'Maciej Konieczny'
 

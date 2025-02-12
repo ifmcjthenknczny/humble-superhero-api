@@ -1,11 +1,11 @@
-import React from 'react'
+import { InputHTMLAttributes } from 'react'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
 import InputWrapper, { Props as InputWrapperProps } from './InputWrapper'
 
 type Props<T extends FieldValues> = {
     register: UseFormRegister<T>
 } & Pick<
-    React.InputHTMLAttributes<HTMLInputElement>,
+    InputHTMLAttributes<HTMLInputElement>,
     'type' | 'min' | 'max' | 'defaultValue'
 > &
     Pick<InputWrapperProps<T>, 'errorMessage' | 'label' | 'fieldName'>

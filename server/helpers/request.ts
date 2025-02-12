@@ -10,12 +10,12 @@ export const apiWrapper = (
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             if (error instanceof ValidationError) {
-                response.status(400).send({ error: error.message })
+                response.status(400).send({ message: error.message })
                 return
             }
             response
                 .status(500)
-                .send({ error: error.message ?? 'Unknown error' })
+                .send({ message: error.message ?? 'Unknown error' })
         }
     }
 }

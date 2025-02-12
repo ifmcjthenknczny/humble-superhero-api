@@ -1,6 +1,6 @@
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 import { FieldValues, Path } from 'react-hook-form'
-import ErrorMessage from './ErrorMessage'
+import ErrorMessage from '../shared/ErrorMessage'
 
 export type Props<T extends FieldValues> = PropsWithChildren<{
     errorMessage?: string

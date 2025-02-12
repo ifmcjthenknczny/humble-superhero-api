@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import Header from './components/Header'
+import { useState } from 'react'
+import Header from './components/layout/Header'
 import HeroImagePanel from './components/panels/HeroImagePanel'
 import FormPanel from './components/panels/FormPanel'
-import Footer from './components/Footer'
+import Footer from './components/layout/Footer'
 import ListPanel from './components/panels/ListPanel'
 
 function App() {

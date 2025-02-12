@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 import classnames from 'classnames'
 
 type Props = PropsWithChildren<{ className?: string; centered?: true }>

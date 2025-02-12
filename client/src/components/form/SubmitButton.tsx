@@ -1,5 +1,4 @@
-import React from 'react'
-import ErrorMessage from './ErrorMessage'
+import ErrorMessage from '../shared/ErrorMessage'
 
 type Props = {
     errorMessage?: string

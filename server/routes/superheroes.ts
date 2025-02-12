@@ -1,4 +1,4 @@
-import { findNextId } from './../helpers/db'
+import { findNextId } from '../helpers/id'
 import { FastifyInstance } from 'fastify'
 import { sortSuperheroes } from '../helpers/sort'
 import { superheroes } from '../database/database'

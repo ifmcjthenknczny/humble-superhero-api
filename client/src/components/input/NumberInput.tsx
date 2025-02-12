@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, PropsWithChildren } from 'react'
+import { useState, ChangeEvent, PropsWithChildren } from 'react'
 import { FieldValues, UseFormRegister } from 'react-hook-form'
 import InputWrapper, { Props as InputWrapperProps } from './InputWrapper'
 
@@ -19,7 +19,7 @@ function NumberButton({ children, onClick }: ButtonProps) {
         <button
             type="button"
             onClick={onClick}
-            className="border-3 text-2xl rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-red-500 transition-colors"
+            className="border-3 text-2xl rounded-full w-8 h-8 flex justify-center items-center cursor-pointer hover:text-red-500 transition-colors hover:bg-[#fec108]"
         >
             {children}
         </button>

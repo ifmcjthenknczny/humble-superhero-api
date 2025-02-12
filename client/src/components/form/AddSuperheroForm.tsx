@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
-import FormInput from './FormInput'
+import FormInput from '../input/FormInput'
 import axios from 'axios'
 import SubmitButton from './SubmitButton'
-import Loader from './Loader'
-import NumberInput from './NumberInput'
+import Loader from '../shared/Loader'
+import NumberInput from '../input/NumberInput'
+import { SERVER_URL } from '../../config'
 
 type FormData = {
     name: string
@@ -18,7 +19,7 @@ export type Props = {
 
 const CLEAR_ERRORS_MS = 2_500
 
-export default function SuperheroForm({
+export default function AddSuperheroForm({
     onSubmit: incrementRefreshCount,
 }: Props) {
     const {
@@ -44,7 +45,7 @@ export default function SuperheroForm({
         setSubmissionError(undefined)
 
         try {
-            await axios.post('http://localhost:8080/superheroes', data)
+            await axios.post(`${SERVER_URL}/superheroes`, data)
             reset()
             incrementRefreshCount()
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -72,11 +73,13 @@ export default function SuperheroForm({
     }, [errors, clearErrors, submissionError])
 
     return (
-        <div>
-            <h2 className="text-3xl mb-6">Superhero Registration Form!!!</h2>
+        <div className="w-full h-full flex flex-col justify-evenly items-center">
+            <h2 className="text-3xl md:text-5xl mb-6 text-center">
+                Superhero Registration Form!!!
+            </h2>
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="flex flex-col gap-1"
+                className="flex flex-col gap-1 w-full md:w-2/3"
             >
                 <FormInput
                     errorMessage={errors.name?.message}

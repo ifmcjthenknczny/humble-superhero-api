@@ -1,9 +1,10 @@
-import React from 'react'
 import './Loader.css'
+
+// https://codepen.io/dragontheory/pen/zbmjoR
 
 export default function Loader() {
     return (
-        <div>
+        <div className="loader-overlay">
             <div className="body">
                 <span>
                     <span></span>
@@ -26,5 +27,3 @@ export default function Loader() {
         </div>
     )
 }
-
-// https://codepen.io/dragontheory/pen/zbmjoR
