@@ -74,9 +74,6 @@ export default function AddSuperheroForm({
 
     return (
         <div className="w-full h-full flex flex-col justify-evenly items-center">
-            <h2 className="text-3xl md:text-5xl mb-6 text-center">
-                Superhero Registration Form!!!
-            </h2>
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-1 w-full md:w-2/3"

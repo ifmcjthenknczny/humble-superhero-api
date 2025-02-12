@@ -5,7 +5,7 @@ import AddSuperheroForm, {
 
 export default function FormPanel(props: SuperheroFormProps) {
     return (
-        <ComicPanel centered>
+        <ComicPanel centered header="Superhero registration form!!!">
             <AddSuperheroForm {...props} />
         </ComicPanel>
     )

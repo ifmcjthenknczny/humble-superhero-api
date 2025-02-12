@@ -80,10 +80,11 @@ export default function ListPanel({ refreshCount }: Props) {
     }
 
     return (
-        <ComicPanel className="flex flex-col">
-            <h2 className="text-3xl md:text-6xl pb-6 self-center w-full border-b-8 text-center mb-4">
-                Available superheroes
-            </h2>
+        <ComicPanel
+            className="flex flex-col"
+            header="Available superheroes"
+            headerClassName="border-b-8"
+        >
             <SuperheroList superheroes={superheroes} />
             {error && <ErrorMessage message={error} />}
         </ComicPanel>
