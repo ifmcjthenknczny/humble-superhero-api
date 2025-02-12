@@ -112,7 +112,7 @@ curl http://localhost:8080/ping
 If I were collaborating with a teammate on this project I would:
 - Focus on improving data persistence by exploring the integration of a proper database (such as PostgreSQL or MongoDB) instead of using an in-memory array. This would make the API more robust and scalable.
 - Assess the need for authentication and authorization to secure the API.
-- Discuss deployment strategies, necessary server configuration changes, and improvements in CI/CD pipelines.
+- Discuss deployment strategies, necessary server and client configuration changes, and improvements in CI/CD pipelines.
 
 ## If I had more time
 ### Frontend enhancements
@@ -140,4 +140,4 @@ If I were collaborating with a teammate on this project I would:
 This work is licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
 
 ## Author
-[ifmcjthenknczny](https://github.com/ifmcjthenknczny)
+Maciej Konieczny - [ifmcjthenknczny](https://github.com/ifmcjthenknczny)
