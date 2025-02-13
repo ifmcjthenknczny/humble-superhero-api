@@ -12,7 +12,9 @@
         "lint": "npx eslint . --fix",
         "test": "jest test",
         "format": "prettier --write .",
-        "checkAll": "yarn format && yarn lint && yarn test && yarn build"
+        "checkAll": "yarn format && yarn lint && yarn test && yarn build",
+        "devDeno": "deno run --allow-read --allow-write --allow-net --unstable-sloppy-imports --watch index.ts",
+        "startDeno": "deno run --allow-read --allow-write --allow-net --unstable-sloppy-imports --watch index.ts"
     },
     "dependencies": {
         "@fastify/cors": "^10.0.2",
