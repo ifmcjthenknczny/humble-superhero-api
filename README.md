@@ -54,7 +54,7 @@ There is no traditional database connection implemented, because it was not in t
 ```yarn install```
 5. Run the backend:
 ```yarn start```  
-(or `yarn dev` to run watch wode for development)
+(To run with Deno instead of Node use `yarn startDeno`, or `yarn dev`/`yarn devDeno` to run watch wode for development)
 6. Leave the server running while proceeding with the next steps
 7. Navigate to the frontend directory:
 ```cd ../client```
@@ -92,9 +92,9 @@ To maintain consistent code style and quality, both `/server` and `/client` dire
 * **Adding a Superhero `(POST /superheroes)`:**
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
-  "name": "Captain Humility",
-  "superpower": "Super Empathy",
-  "humilityScore": 10
+  "name": "Iron Man 2",
+  "superpower": "Irony",
+  "humilityScore": 2
 }' http://localhost:8080/superheroes
 ```
 
@@ -114,6 +114,7 @@ curl http://localhost:8080/ping
 If I were collaborating with a teammate on this project I would:
 - Focus on improving data persistence by exploring the integration of a proper database (such as PostgreSQL or MongoDB) instead of using an in-memory array. This would make the API more robust and scalable.
 - Assess the need for authentication and authorization to secure the API.
+- Evaluate and decide on the project's runtime environment Considerations include Node.js, Deno, and Bun. Node.js is currently favored due to its popularity and the project's existing optimizations.
 - Discuss deployment strategies, necessary server and client configuration changes, and improvements in CI/CD pipelines.
 - Develop and maintain Swagger documentation for clarity.
 
