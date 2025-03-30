@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           registry-url: 'https://npm.pkg.github.com'
           cache: 'yarn'
-          cache-dependency-path: 'lambda-scraper/yarn.lock'
+          cache-dependency-path: 'client/yarn.lock'
 
       - name: Install deps
         run: yarn install --frozen-lockfile
@@ -50,7 +50,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           registry-url: 'https://npm.pkg.github.com'
           cache: 'yarn'
-          cache-dependency-path: 'lambda-scraper/yarn.lock'
+          cache-dependency-path: 'server/yarn.lock'
 
       - name: Install deps
         run: yarn install --frozen-lockfile
